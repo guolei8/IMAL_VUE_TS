@@ -1,2 +1,2 @@
-// export { default as LoginModule } from './modules/login';
+export { default as LoginModule } from './modules/login';
 

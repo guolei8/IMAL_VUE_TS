@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>B备份 6</title>
+    <desc>Created with Sketch.</desc>
+    <g id="组件" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组">
+            <rect id="矩形" x="0" y="0" width="24" height="24" rx="2"></rect>
+            <path d="M16,3 L8,3 C7.72385763,3 7.47385763,3.11192881 7.29289322,3.29289322 C7.11192881,3.47385763 7,3.72385763 7,4 L7,20.1314829 L10.8905996,17.5377498 C11.226499,17.3138169 11.6132495,17.2018504 12,17.2018504 C12.3867505,17.2018504 12.773501,17.3138169 13.1094004,17.5377498 L17,20.1314829 L17,4 C17,3.72385763 16.8880712,3.47385763 16.7071068,3.29289322 C16.5261424,3.11192881 16.2761424,3 16,3 Z" id="矩形" stroke="#404040" stroke-width="2"></path>
+        </g>
+    </g>
+</svg>

@@ -4,13 +4,13 @@
       <el-form ref="form" :label-position="labelPosition" :model="form" label-width="80px" :rules="rules" status-icon>
       <!-- <img src="../assets/login_bg.png" alt=""> -->
       <el-form-item label="用户名" prop="username">
-        <el-input v-model="form.username" placeholder="请输入用户名"></el-input>
+        <el-input v-model="form.uname" placeholder="请输入用户名"></el-input>
       </el-form-item>
       <el-form-item label="密码" prop="password" class="password_input">
-        <el-input v-model="form.password" type="password" placeholder="请输入密码"></el-input>
+        <el-input v-model="form.upass" type="password" placeholder="请输入密码"></el-input>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary">登录</el-button>
+        <el-button type="primary" @click="handleLogin">登录</el-button>
       </el-form-item>
     </el-form>
     </div>
@@ -19,25 +19,40 @@
 
 <script lang="ts">
 import { Component, Vue, Ref } from 'vue-property-decorator'
-// import { loginApi } from '@/api'
+import { LoginModule } from '../store/index'
 
 @Component({
   name: 'Login'
 })
 export default class extends Vue {
-  // @Ref('Form') readonly Form!: Form
+  @Ref('form') readonly Form!: HTMLFormElement
 
   private labelPosition: string = 'top'
   // 表单数据
   private form = {
-    username: '',
-    password: ''
+    uname: 'admin',
+    upass: '123'
   }
 
   // 表单规则
   private rules = {
-    account: [{ required: true, message: '请输入帐号', trigger: 'change' }],
-    password: [{ required: true, message: '请输入密码', trigger: 'change' }]
+    uname: [{ required: true, message: '请输入帐号', trigger: 'change' }],
+    upass: [{ required: true, message: '请输入密码', trigger: 'change' }]
+  }
+  private handleLogin() {
+    this.Form.validate((valid: boolean | undefined): void => {
+      if (valid) {
+        this.submitLogin()
+      }
+    })
+  }
+  private async submitLogin() {
+    try {
+      const res = await LoginModule.login(this.form)
+      this.$router.push({ path: '/index' })
+    } catch (error) {
+      this.$message.error('错了哦，这是一条错误消息')
+    }
   }
 }
 </script>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>B备份 7</title>
+    <desc>Created with Sketch.</desc>
+    <g id="组件" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组">
+            <rect id="矩形" x="0" y="0" width="24" height="24" rx="2"></rect>
+            <g id="编组-22" transform="translate(3.000000, 3.000000)">
+                <circle id="椭圆形备份-14" stroke="#404040" stroke-width="2" cx="9" cy="5.5" r="4.5"></circle>
+                <path d="M9,9 C13.9705627,9 18,13.0294373 18,18 L18,18 L16,18 C16,14.1340068 12.8659932,11 9,11 C5.13400675,11 2,14.1340068 2,18 L0,18 C0,13.0294373 4.02943725,9 9,9 Z" id="形状结合备份-2" fill="#404040"></path>
+            </g>
+        </g>
+    </g>
+</svg>

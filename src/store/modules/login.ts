@@ -2,46 +2,47 @@ import store from '@/store/store';
 import {
   VuexModule, Module, Mutation, Action, getModule,
 } from 'vuex-module-decorators';
+import { loginApi } from '@/api';
+import { getToken, setToken, resetToken, setUserName, getUserName } from '@/utils/token';
+import * as types from '../mutation-types';
 
 
-interface IUserInfo {
-  account: string | null;
-  customerId: number | string;
-  id: number | string;
-  userName: string | null;
+
+interface userInfor {
+  data: {
+    token: string | ''
+    uname: string | ''
+  }
 }
+@Module({
+  dynamic: true, namespaced: true, name: 'account', store,
+})
+class Login extends VuexModule {
+  // 用户token
+  public token = getToken() || ''
+  public uname = getUserName() || ''
 
-export interface IConfig {
-  id: null | number;
-  cid: null | number;
-  platformList: string[];
-  quotaMonitor: number | null;
+  // 用户登录
+  @Action({ commit: types.SET_TOKEN, rawError: true })
+  public async login(params: loginApi.ILogin) {
+    const data = await loginApi.login(params);
+    return data;
+  }
+
+  // 用户退出
+  @Action({ commit: types.REMOVE_TOKEN })
+  public async logout() {
+    const data = await loginApi.logout();
+    return data;
+  }
+
+
+  @Mutation
+  private [types.SET_TOKEN](userInfor: userInfor) {
+    console.log(userInfor)
+    const { token, uname } = userInfor.data
+    setToken(token);
+    setUserName(uname)
+  }
 }
-
-interface IState {
-  token: string | undefined;
-  userInfo: IUserInfo;
-  userConfig: IConfig;
-}
-
-const getDefaultUserInfo = (): IUserInfo => ({
-  account: '',
-  id: '',
-  userName: '',
-  customerId: '',
-});
-
-const getUserConfig = (): IConfig => ({
-  id: null,
-  cid: null,
-  platformList: [],
-  quotaMonitor: null,
-});
-
-// @Module({
-//   dynamic: true, namespaced: true, name: 'account', store,
-// })
-// class Account extends VuexModule implements IState {
-
-// }
-// export default getModule(Account);
+export default getModule(Login);

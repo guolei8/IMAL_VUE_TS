@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>B</title>
+    <desc>Created with Sketch.</desc>
+    <g id="组件" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组">
+            <rect id="矩形" x="0" y="0" width="24" height="24" rx="2"></rect>
+            <g id="编组-14" transform="translate(1.000000, 1.000000)">
+                <circle id="椭圆形" stroke="#404040" stroke-width="2" cx="11" cy="11" r="10"></circle>
+                <polygon id="矩形备份-27" fill="#404040" points="1 10.5 7 10.5 7 11.5 1 11.5"></polygon>
+                <polygon id="矩形备份-27" fill="#404040" points="15 10.5 21 10.5 21 11.5 15 11.5"></polygon>
+                <polygon id="矩形备份-27" fill="#404040" transform="translate(11.000000, 11.000000) rotate(90.000000) translate(-11.000000, -11.000000) " points="7 12.5 15 8.5 15 9.5 7 13.5"></polygon>
+                <polygon id="矩形备份-27" fill="#404040" transform="translate(14.250000, 12.750000) rotate(90.000000) translate(-14.250000, -12.750000) " points="12 11 16.5 13.5 16.5 14.5 12 12"></polygon>
+                <polygon id="矩形备份-27" fill="#404040" transform="translate(7.750000, 9.250000) rotate(90.000000) translate(-7.750000, -9.250000) " points="5.5 7.5 10 10 10 11 5.5 8.5"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
