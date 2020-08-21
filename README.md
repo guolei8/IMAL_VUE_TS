@@ -1,4 +1,4 @@
-# IMAL
+# pub-sentiment-koubei
 
 ### 组件代码的组织方式
   1. @Prop
@@ -27,7 +27,7 @@
   * [vuex-module-decorator](https://github.com/championswimmer/vuex-module-decorators#readme)
 
 
-```
+``` 
 # 安装依赖
 npm i
 # or
@@ -69,6 +69,7 @@ npm run test:e2e
 
 
 .项目结构树
+
 |----App.vue
 |----main.ts
 |----layout

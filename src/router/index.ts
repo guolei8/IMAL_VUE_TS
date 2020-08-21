@@ -1,28 +1,17 @@
 import Vue from 'vue';
-import VueRouter, { RouteConfig } from 'vue-router';
+import VueRouter from 'vue-router';
+import routes from './modules';
+import routerPermission from './permission';
 
 Vue.use(VueRouter);
 
-const routes: RouteConfig[] = [
-  {
-    path: '/',
-    redirect: '/login'
-  },
-  {
-    path: '/login',
-    component: () => import(/* webpackChunkName: "Login" */ '../views/Login.vue'),
-  },
-  {
-    path: '/index',
-    name: 'index',
-    component: () => import('../views/Index.vue'),
-  },
-];
-
 const router = new VueRouter({
   mode: 'history',
-  base: process.env.BASE_URL,
+  base: '/sys/',
   routes,
 });
+console.log(routes)
+
+routerPermission(router);
 
 export default router;
