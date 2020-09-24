@@ -91,7 +91,7 @@ export default class extends Vue {
       const res = await LoginModule.logout()
       this.$router.push({ path: '/login' })
     } catch (error) {
-      this.$message.error('错了哦，这是一条错误消息')
+      this.$message.error('退出失败')
     }
   }
   private projectClick() {

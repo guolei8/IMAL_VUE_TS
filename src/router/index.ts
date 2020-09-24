@@ -7,10 +7,9 @@ Vue.use(VueRouter);
 
 const router = new VueRouter({
   mode: 'history',
-  base: '/sys/',
+  base: '/imal/',
   routes,
 });
-console.log(routes)
 
 routerPermission(router);
 

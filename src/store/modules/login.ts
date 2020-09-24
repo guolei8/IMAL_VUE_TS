@@ -44,5 +44,9 @@ class Login extends VuexModule {
     setToken(token);
     setUserName(uname)
   }
+
+  @Mutation
+  private [types.REMOVE_TOKEN]() {
+  }
 }
 export default getModule(Login);

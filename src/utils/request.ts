@@ -56,7 +56,7 @@ service.interceptors.request.use((config) => {
 // 响应拦截
 service.interceptors.response.use(
   // 请求成功
-  res => res.status === 200 ? Promise.resolve(res) : Promise.reject(res),
+  res => res.status === 200 ? Promise.resolve(res.data) : Promise.reject(res),
   error => {
     const { response } = error
     if (response) {
